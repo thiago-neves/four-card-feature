@@ -1,0 +1,134 @@
+:root {
+	/* Colors */
+	--clr-red: hsl(0, 78%, 62%);
+	--clr-white: hsl(0, 0%, 100%);
+	--clr-cyan: hsl(180, 62%, 55%);
+	--clr-blue: hsl(212, 86%, 64%);
+	--clr-orange: hsl(34, 97%, 64%);
+	--clr-neutral-400: hsl(212, 6%, 44%);
+	--clr-neutral-500: hsl(234, 12%, 34%);
+
+	/* Font size */
+	--text-base: 0.9375rem;
+	--text-l: 3rem;
+	--text-xl: 1.5rem;
+}
+
+body {
+	padding: 45px 30px;
+	padding-top: 58px;
+	line-height: 1.4;
+	letter-spacing: 0.1px;
+	font-size: var(--text-base);
+	color: var(--clr-neutral-500);
+	font-family: "Poppins", sans-serif;
+}
+
+.header .title {
+	font-weight: 200;
+	text-align: center;
+	letter-spacing: .2px;
+	font-size: var(--text-xl);
+}
+
+.title .bold {
+	font-weight: 700;
+}
+
+.header .description {
+	margin-block: 16px;
+	text-align: center;
+}
+
+.card-container {
+	gap: 32px;
+	display: grid;
+	margin-top: 60px;
+}
+
+.card {
+	display: grid;
+	border-radius: 5px;
+	padding-block: 30px;
+	border-top: 4px solid;
+	box-shadow: 0px 10px 15px hsla(212, 86%, 34%, .15);;
+}
+
+.card .content {
+	padding-inline: 32px;
+}
+
+.card .title {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.card .description {
+	margin-top: 4px;
+	font-size: 13px;
+	line-height: 1.6;
+	color: var(--clr-neutral-400);
+}
+
+.card-icon {
+	padding: 14px;
+	margin-top: 18px;
+	justify-self: end;
+	padding-right: 32px;
+}
+
+.supervisor {
+	grid-area: supervisor;
+	border-color: var(--clr-cyan);
+}
+
+.builder {
+	grid-area: builder;
+	border-color: var(--clr-red);
+}
+
+.karma {
+	grid-area: karma;
+	border-color: var(--clr-orange);
+}
+
+.calculator {
+	grid-area: calculator;
+	border-color: var(--clr-blue);
+}
+
+@media screen and (min-width: 768px) {
+	body {
+		min-height: 100dvh;
+	}
+
+	.main {
+		margin-bottom: 120px;
+	}
+
+	.header .title {
+		margin-top: 44px;
+		font-size: 36px;
+	}
+
+	.title .bold {
+		display: block;
+	}
+
+	.header .description {
+		max-width: 512px;
+		margin-inline: auto;
+	}
+
+	.card-container {
+		margin-block: 74px;
+		justify-content: center;
+		grid-template-areas:
+			".	builder ."
+			"supervisor builder  calculator"
+			"supervisor karma  calculator"
+			". karma .";
+		grid-template-rows: auto auto;
+		grid-template-columns: 350px 350px 350px;
+	}
+}
