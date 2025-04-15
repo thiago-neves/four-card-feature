@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click here](https://your-solution-url.com)
-- Live Site URL: [Click here](https://your-live-site-url.com)
+- Solution URL: [Click here](https://github.com/thiago-neves/four-card-feature)
+- Live Site URL: [Click here](https://thiago-neves.github.io/four-card-feature/)
 
 ### Built with
 
